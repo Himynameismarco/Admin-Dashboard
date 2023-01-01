@@ -11,7 +11,7 @@
 <body>
 <div class="outer-grid">
   <div class="grid-item sidebar">
-    <div class="icon"><img width="60vw" src="res/dashboard.png"></div>
+    <div class="icon-big" id="dashboard"><img width="60vw" src="res/dashboard.png"></div>
     <div><p>Home</p></div>
     <div><p>Profile</p></div>
     <div><p>Messages</p></div>
@@ -25,90 +25,77 @@
 
   </div>
   <div class="grid-item topbar">
-    <div class="icon"><p>ICON</p></div>
-    <div class="searchbar"><p>SEARCHBAR</p></div>
+    <div class="icon"><img width="35vw" src="res/loupe.png"></div>
+    <div class="searchbar"><input type="text" style="width: 30vw;"></div>
     <div><p>    </p></div>
-    <div class="icon"><p>ICON</p></div>
-    <div class="profile-picture"><p>PP</p></div>
-    <div class="name"><p>MARCO ZANDER</p></div>
-    <div class="profile-picture-big"><p>PP-B</p></div>
-    <div class="welcome"><p>Hi, <br>Marco! How are you doin'?</p></div>
+    <div class="icon"><img width="25vw" src="res/notification.png"></div>
+    <div class="icon"><img width="35vw" src="res/avatar.png"></div>
+    <div class="name"><p>187-KIKA</p></div>
+    <div class="icon-big"><img width="65vw" src="res/avatar.png"></div>
+    <div class="welcome"><p>Hi, <br>Mister! ... or Lady! Ready for some philosophy-content written in the beautiful German language?</p></div>
     <div class="flex-container">
-      <button></button>
-      <button></button>
-      <button></button>
+      <a href="https://marcozander.com/2022/09/13/hide-out/"><button>EN</button></a>
+      <a href="https://marcozander.com/"><button id="blog">my<sup>Blog</sup></button></a>
+      <a href="https://marcozander.com/2020/12/26/%d1%8f-%d0%bf%d0%b8%d1%88%d1%83-%d0%b2%d0%b0%d0%bc-%d1%81%d1%82%d0%b8%d1%85%d0%b8/"><button>стiхи</button></a>
     </div>
 
   </div>
   <div class="grid-item main-area">
-    <div class="first-row-left"><p>3.1</p></div>
-    <div class="first-row-right"><p>3.2</p></div>
-    <div class="flex-container">
-      <div><p>3.3</p></div>
-      <div><p>3.4</p></div>
-      <div><p>3.5</p></div>
-      <div><p>3.6</p></div>
-      <div><p>3.7</p></div>
-      <div><p>3.8</p></div>
+    <div class="first-row-left">
+      <h2>Deine Projekte</h2>
     </div>
-    <div class="side-bar">
-      <div><p>3.3</p></div>
-      <div><p>3.4</p></div>
-      <div><p>3.5</p></div>
-      <div><p>3.6</p></div>
-      <div><p>3.7</p></div>
-      <div><p>3.8</p></div>
+    <div class="inner-inner-grid">
+      <div class="card">
+        <h3>Wo bin ich?</h3>
+        <p>Was will das besagen: die Welt? Was bedeutet dieses Wort: Wer hat mich in das Ganze hineingenarrt und läßt mich nun da stehen?</p>
+      </div>
+      <div class="card">
+        <h3>Wer bin ich?</h3>
+        <p>Wie bin ich in die Welt hineingekommen; warum bin ich nicht gefragt worden, warum nicht mit Bräuchen und
+          Regeln bekannt gemacht worden, sondern ins Glied gesteckt, als sei ich von einem Seelenverkooper gekauft?</p></div>
+      <div class="card">
+        <h3>Wie bin ich...</h3>
+        <p>... Interessent in jener großen Entreprise geworden, die man <i>die</i> Wirklichkeit nennt? <i>Warum</i> soll ich Interessent sein? Ist das nicht freigestellt? Und soll ich es notwendig sein? </p>
+      </div>
+      <div class="card">
+        <h3>Wo ist denn...</h3>
+        <p>... der Verhandlungsleiter, ich habe eine Bemerkung zu machen? Gibt es keinen Verhandlungsleiter: Wo soll ich mich mit meiner Klage hinwenden?</p>
+      </div>
+      <div class="card">
+        <h3>Das Dasein ist ...</h3>
+        <p>... ja eine Debatte, darf ich darum bitten, daß meine Betrachtung mit in Erwägung gezogen wird? Soll man das Dasein nehmen als was es ist, wäre es dann nicht am besten, daß man zu wissen bekäme, wie es ist? </p>
+      </div>
+      <div class="card">
+        <h3>ENDE</h3>
+        <p>Das waren ein paar Absätze aus <i>Die Wiederholung</i> von <i>Sören Kierkegaard</i> - im dtv Verlag. Aus dem Dänischen von Walter Rest, Günther Jungbluth und Rosemarie Lögstrup.</p>
+      </div>
+    </div>
+    <div class="first-row-right">
+      <div><h2>Bekanntmachungen</h2></div>
     </div>
 
+    <div class="side-bar">
+      <div id="card1">
+        <p>Frei wovon? Was schiert das Zarathustra? Hell aber soll mir dein Auge künden: frei <i>wozu</i>? (F. Nietzsche)</p>
+        <hr class="dotted">
+        <p>... jeder Bewohner der Stadt hat sich auf Grund der drohenden Gefahr eines Orkangriffs entsprechend vorzubereiten. </p>
+        <hr class="dotted">
+        <p>Das ewige Schweigen dieser unendlichen Räume erschreckt mich! (B. Pascal)</p>
+      </div>
+      <div id="aboveCard2">
+        <h2><br>Trending</h2>
+      </div>
+      <div id="card2">
+        <div class="icon"><img width="35vw" src="res/blank-user-profile.png"></div>
+        <div><h4>@soerenKierkegaard</h4></div>
+        <div class="icon"><img width="35vw" src="res/blank-user-profile.png"></div>
+        <div><h4>@fernandoPessoa</h4></div>
+        <div class="icon"><img width="35vw" src="res/blank-user-profile.png"></div>
+        <div><h4>@henriBergson</h4></div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-<!--
-<div class="grid-container">
-<div class="grid-item">
-  <p>Odin 1</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 2</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 3</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 4</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 5</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 6</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 7</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 8</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 9</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-<div class="grid-item">
-  <p>Odin 10</p>
-  <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
-</div>
-</div>
--->
-
 
 
 <script src="script.js"></script>

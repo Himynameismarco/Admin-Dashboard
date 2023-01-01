@@ -2,6 +2,10 @@ body {
   margin: 0px 0px 0px 0px;
 }
 
+:root {
+  --main-bg-color: white;
+}
+
 .outer-grid {
   height: 99vh;
   width: 99vw;
@@ -10,16 +14,15 @@ body {
   gap: 8px;
   padding: 4px;
   border: 1px solid grey;
-  background-color: skyblue;
+  background-color: black;
   grid-template-rows: 1fr 3fr;
-  grid-template-columns: 1fr 2fr 1fr;
-
+  grid-template-columns: 0.7fr 2fr 1fr;
 }
 
 .grid-item {
   background-color: transparent;
   text-align: center;
-  color: #ddd;
+  color: black;
   font-family: sans-serif;
   font-size: 0.75rem;
   padding: 0px 0px 0px 0px;
@@ -28,19 +31,19 @@ body {
 /* INNER-GRIDS */
 
 .sidebar {
-  background-color: white;
+  background-color: var(--main-bg-color);
   grid-area: 1 / 1 / 3 / 1;
   display: grid;
   resize: both;
   gap: 4px;
-  padding: 2px;
+  padding-left: 3vw;
   border: 1px solid grey;
   grid-template-rows: repeat(13, 1fr);
   grid-template-columns: 1fr;
 }
 
 .topbar {
-  background-color: chocolate;
+  background-color: var(--main-bg-color);
   grid-area: 1 / 2 / 2 / 4;
 
   display: grid;
@@ -48,12 +51,12 @@ body {
   gap: 4px;
   padding: 2px;
   border: 1px solid grey;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 2fr 3fr;
   grid-template-columns: repeat(12, 1fr);
 }
 
 .main-area {
-  background-color: cornflowerblue;
+  background-color: var(--main-bg-color);
   grid-area: 2 / 2 / 4 / 4;
 
   display: grid;
@@ -77,13 +80,38 @@ button {
   align-content: center;
   width: 5vw;
   height: 4vh;
-  margin: 2vh 3vw 2vh 3vw;
+  margin: 2vh 0vw 2vh 3vw;
+  box-shadow: 0 0 5px 2px rgb(15, 15, 15, 0.2);
+  border-radius: 1vw;
+  border-left: 0.5em solid rgba(180,0,0,0.89);
 }
 
-.sidebar icon {
-  font-size: xx-large;
+#blog {
+  width: 6.5vw;
+}
+
+sup {
+  font-size: xx-small;
+}
+
+button:hover {
+  width: 6vw;
+  height: 5vh;
+}
+
+.icon {
   background-color: transparent;
-  padding: 3vh 0vw 3vh 0vw;
+  padding: 2vh 0vw 2vh 0vw;
+}
+
+.icon-big {
+  background-color: transparent;
+  padding: 3vh 0vw 1vh 5vw;
+  text-align: left;
+}
+
+#dashboard {
+  padding: 3vh 0vw 1vh 0vw;
 }
 
 .sidebar p {
@@ -91,7 +119,6 @@ button {
   color: black;
   font-weight: bold;
   font-size: large;
-  padding-left: 3vw;
 }
 
 .profile-picture {
@@ -104,77 +131,127 @@ button {
 }
 
 .searchbar {
-  background-color: cornflowerblue;
+  background-color: var(--main-bg-color);
   grid-area: 1 / 2 / 1 / 8;
+  text-align: center;
+  padding: 2vh 0vw 2vh 0vw;
 }
 
 .welcome {
-  background-color: cornflowerblue;
+  font-size: medium;
+  text-align: left;
+  padding: 2vh 0vw 0vh 0vw;
+  background-color: var(--main-bg-color);
   grid-area: 2 / 3 / 2 / 8;
 }
 
 .name {
-  background-color: darkred;
+  background-color: var(--main-bg-color);
+  white-space: nowrap;
+  font-size: large;
+  font-weight: bold;
   grid-area: 1 / 11 / 1 / 13;
 }
 
+.card {
+  border-left: 0.75rem solid rgba(180,0,0,0.89);
+  padding: 1vh 1vw 1vh 1vw;
+  margin-left: 1vw;
+  color: white;
+  text-align: left;
+  background-color: rgba(5,0,0,0.89);
+  box-shadow: 0 0 5px 2px rgb(15, 15, 15, 0.2);
+  border-radius: 1vw;
+}
+
+.card .main-area p {
+  text-align: left;
+  font-size: medium;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: large;
+}
+
 .main-area > div {
-  background-color: white;
+  background-color: var(--main-bg-color);
+}
+
+h2 {
+  padding-left: 1vw;
+  font-size: large;
+  text-align: left;
+  font-weight: lighter;
 }
 
 .main-area > .first-row-left {
   grid-area: 1 / 1 / 1 / 3;
-  background-color: #444444;
+  background-color: var(--main-bg-color);
 }
 
 .main-area > .first-row-right {
   grid-area: 1 / 3 / 1 / 4;
-  background-color: darkred;
 }
 
-.main-area > .flex-container {
+.main-area > .inner-inner-grid {
   display: grid;
   grid-area: 2 / 1 / 14 / 3;
+
+  gap: 1vw;
 
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 
-  background-color: chocolate;
+  background-color: var(--main-bg-color);
 }
 
 .main-area > .side-bar {
-  grid-area: 1 / 3 / 14 / 3;
+  grid-area: 2 / 3 / 14 / 3;
   display: grid;
 
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   grid-template-columns: 1fr;
-
 }
 
+.main-area > .side-bar > #card1 {
+  grid-area: 1 / 1 / 4 / 1;
+  border-left: 0.75rem solid rgba(180,0,0,0.89);
+  padding: 1vh 1vw 1vh 1vw;
+  margin-left: 1vw;
+  color: white;
+  text-align: left;
+  background-color: rgba(5,0,0,0.89);
+  box-shadow: 0 0 5px 2px rgb(15, 15, 15, 0.2);
+  border-radius: 1vw;
+}
 
-/*
-.grid-container {
-  resize: both;
-  overflow: auto;
+.main-area > .side-bar > #card2 {
+  grid-area: 5 / 1 / 8 / 1;
+  border-left: 0.75rem solid rgba(180,0,0,0.89);
+  padding: 0vh 1vw 1vh 1vw;
+  margin-left: 1vw;
+  color: white;
+  text-align: left;
+  background-color: rgba(5,0,0,0.89);
+  box-shadow: 0 0 5px 2px rgb(15, 15, 15, 0.2);
+  border-radius: 1vw;
+
   display: grid;
-  gap: 4px;
-  padding: 4px;
-  border: 1px solid grey;
-  background-color: skyblue;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 2fr) repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 3fr;
+
+}
+
+h4 {
+  font-size: 1rem;
+  padding-top: 1vh;
+  font-weight: lighter;
 }
 
 
 
-p {
-  margin: 12px auto 24px;
-}
 
-img {
-  height: 60px;
-}
- */
 
-/* grid-auto: 80px; --> Es werden implizite (also nicht explizit von uns gesetzte items
-mit der Größe 80px erstellt.)  */
+
+
