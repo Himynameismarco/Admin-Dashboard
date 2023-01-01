@@ -114,6 +114,10 @@ button:hover {
   padding: 3vh 0vw 1vh 0vw;
 }
 
+#search {
+  text-align: right;
+}
+
 .sidebar p {
   text-align: left;
   color: black;
@@ -133,16 +137,23 @@ button:hover {
 .searchbar {
   background-color: var(--main-bg-color);
   grid-area: 1 / 2 / 1 / 8;
-  text-align: center;
-  padding: 2vh 0vw 2vh 0vw;
+  text-align: left;
+  padding: 2vh 0vw 2vh 2vw;
+}
+
+input {
+  box-shadow: 0 0 5px 2px rgb(15, 15, 15, 0.2);
+  border-radius: 1vw;
+  border-left: 0.5em solid rgba(180,0,0,0.89);
+  height: 3vh;
 }
 
 .welcome {
   font-size: medium;
   text-align: left;
-  padding: 2vh 0vw 0vh 0vw;
+  padding: 2vh 0vw 0vh 2vw;
   background-color: var(--main-bg-color);
-  grid-area: 2 / 3 / 2 / 8;
+  grid-area: 2 / 2 / 2 / 8;
 }
 
 .name {
